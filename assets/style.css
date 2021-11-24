@@ -71,6 +71,12 @@ main {
   background-color: var(--secundary-dark-1);
   cursor: pointer;
 }
+#mount{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 .card {
   display: inline-flex;
   width: 200px;
