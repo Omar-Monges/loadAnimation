@@ -1,0 +1,84 @@
+:root {
+  --primary-color: #3a3b57;
+  --secundary: #f8cfed;
+  --neutro: #141324; /* text/neutro */
+  --primary-ligth-1: #3a3b575e;  /* fondos, bordes */
+  --primary-ligth-2: #3a3b572b; /* elements con fondos*/
+  --secundary-ligth-1: #f8cfed73; /*  claros */
+  --secundary-ligth-2: #f8cfed2b;
+  --primary-dark-1: #1b1b2d;  /*Estado (hove, active, etc)*/
+  --primary-dark-2: #36364f;  /*Borders en general*/
+  --secundary-dark-1: #ccabc3;  /*textos sobre*/
+  --secundary-dark-2: #ccabc3cc; /*fondos claros*/
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 70px;
+  background-color: var(--primary-color);
+  color: var(--secundary);
+}
+main {
+  height: auto;
+  background-color: var(--primary-dark-1);
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70px;
+  text-align: center;
+  background-color: var(--secundary-ligth-1);
+  color: var(--primary-dark-2);
+}
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook divlds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fff;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
