@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./assets/style.css">
@@ -9,29 +9,46 @@
 </head>
 <body>
   <header>
-    <h1>Practicando animations</h1>
+    <h1>Manipulando el DOM</h1>
   </header>
   <main>
     <div class="container">
       <h2 class="subtitle">Cards con animacion de carga</h2>
       <div class="btns">
-        <button class="btns__add">Add Card</button>
-        <button class="btns__rm">Remove Card</button>
+        <button class="btns__add" onclick="addCard()">Add Card</button>
+        <button class="btns__rm" onclick="rmCards()">Remove Cards</button>
       </div>
     </div>
     <div id="mount">
-      <div class="lds-facebook"><div></div><div></div><div></div></div>
-      <div class="lds-facebook"><div></div><div></div><div></div></div>
-      <div class="lds-facebook"><div></div><div></div><div></div></div>
-      <div class="lds-facebook"><div></div><div></div><div></div></div>
-      <div class="lds-facebook"><div></div><div></div><div></div></div>
+      </div>
     </div>
   </main>
   <footer>
-    <p>Made by @Omar-Monges</p>
+    <p>
+      Made by @Omar-Monges with
+      <a class="refer" href="http://loading.io/css/">LOADING.IO</a>
+    </p>
   </footer>
   <script>
-    const app = document.querySelector('mount')
+    function nodeAnimation(){
+      const container = document.createElement('div')
+      container.classList.add('lds-facebook')
+      for(let i = 0; i < 3; i++){
+        container.append(document.createElement('div'))
+      }
+      return container
+    }
+    function addCard(){
+      const card = document.createElement('div'),
+        containerAnimation = nodeAnimation()
+      card.classList.add('card')
+      card.appendChild(containerAnimation)
+      app.append(card)
+    }
+    function rmCards(){
+      app.innerHTML = ''
+    }
+    const app = document.querySelector('#mount')
   </script>
 </body>
 </html>

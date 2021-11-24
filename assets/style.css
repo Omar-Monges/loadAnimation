@@ -19,7 +19,7 @@
   box-sizing: border-box;
 }
 body {
-  height: 100vh;
+  height: 100%;
 }
 header {
   display: flex;
@@ -71,6 +71,16 @@ main {
   background-color: var(--secundary-dark-1);
   cursor: pointer;
 }
+.card {
+  display: inline-flex;
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secundary-ligth-2);
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -78,7 +88,14 @@ footer {
   height: 70px;
   text-align: center;
   background-color: var(--secundary-ligth-1);
+  color: var(--neutro);
+}
+.refer {
+  text-decoration: none;
   color: var(--primary-dark-2);
+}
+.refer:hover {
+  text-decoration: underline;
 }
 
 .lds-facebook {
